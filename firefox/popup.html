@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Speedrun Info</title>
+    <style>
+        body {
+            width: 320px;
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 20px;
+            box-sizing: border-box;
+            background-color: #1e1e2e;
+            color: #f0f0f0;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+        .game-info {
+            display: flex;
+            align-items: center;
+            background-color: #2e2e3e;
+            padding: 15px;
+            border-radius: 8px;
+            transition: transform 0.3s ease;
+        }
+        .game-info:hover {
+            transform: scale(1.02);
+        }
+        .game-info img {
+            width: 60px;
+            height: auto;
+            margin-right: 15px;
+            border-radius: 6px;
+            border: 2px solid #007BFF;
+        }
+        .game-details {
+            flex: 1;
+        }
+        .game-details h2 {
+            font-size: 20px;
+            margin: 0;
+            margin-bottom: 8px;
+            color: #ffcc00;
+        }
+        .game-details p {
+            font-size: 15px;
+            margin: 4px 0;
+            color: #dcdcdc;
+        }
+        .game-details a {
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: bold;
+            display: inline-block;
+            margin-top: 12px;
+            background-color: #007BFF;
+            padding: 8px 12px;
+            border-radius: 4px;
+            transition: background-color 0.3s ease;
+        }
+        .game-details a:hover {
+            background-color: #0056b3;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="game-info">
+        <img id="game-image" src="" alt="Game Image">
+        <div class="game-details">
+            <h2 id="game-name">Loading...</h2>
+            <p id="game-moderators">Moderators: Loading...</p>
+            <p id="game-release-date">Release Date: Loading...</p>
+            <p id="game-creation-date">Added on: Loading...</p>
+            <a id="speedrun-link" href="#" target="_blank">View on Speedrun.com</a>
+        </div>
+    </div>
+    <script src="popup.js"></script>
+</body>
+</html>
