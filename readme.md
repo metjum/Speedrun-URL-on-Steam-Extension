@@ -1,0 +1,1 @@
+[![Available in Chrome Web Store](https://img.shields.io/badge/Available%20in%20Chrome%20Web%20Store-brightgreen?style=for-the-badge&logo=google-chrome)](https://chromewebstore.google.com/detail/speedrun-url-on-steam/ljgjgfaelgkpcpibjegefeljlhpjehek)

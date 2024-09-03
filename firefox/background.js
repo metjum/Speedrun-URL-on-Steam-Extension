@@ -7,7 +7,6 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
       let gameReleaseDate = '';
       let gameCreationDate = '';
   
-      // Načítání dat z API Steamu
       fetch(`https://store.steampowered.com/api/appdetails?appids=${steamAppId}`)
         .then(response => response.json())
         .then(data => {
@@ -19,7 +18,6 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
             throw new Error('App data not found');
           }
   
-          // Načítání dat z API Speedrun
           return fetch(`https://www.speedrun.com/api/v1/games?name=${encodeURIComponent(gameName)}`);
         })
         .then(response => response.json())
@@ -31,7 +29,6 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
           gameReleaseDate = gameData && gameData['release-date'] ? gameData['release-date'] : 'N/A';
           gameCreationDate = gameData && gameData.created ? gameData.created : 'N/A';
   
-          // Uložení dat do úložiště
           chrome.storage.local.set({
             'gameName': gameName,
             'gameImage': gameImage,
@@ -48,7 +45,7 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
           sendResponse({ link: null });
         });
   
-      return true; // Označení, že odpověď bude asynchronní
+      return true;
     }
   });
   
